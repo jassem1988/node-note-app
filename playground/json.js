@@ -1,7 +1,20 @@
-var obj = {
-  name: "Jassem"
-};
+// var obj = {
+//   name: 'Jassem'
+// };
+//
+// var stringObj = JSON.stringify(obj); //convert obj to JSON string
+// console.log(typeof stringObj);
+// console.log(stringObj);
 
-var stringObj = JSON.stringify(obj);
-console.log(typeof stringObj);
-console.log(stringObj);
+// var personString = '{"name": "Jassem", "age": 31}';
+// var person = JSON.parse(personString); // convert JSON string to  obj
+//
+// console.log(typeof person);
+// console.log(person);
+
+const fs = require("fs");
+
+var originalNote = {
+  title: 'Some title',
+  body: 'Some body'
+};
