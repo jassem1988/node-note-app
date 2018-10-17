@@ -6,6 +6,5 @@ module.exports.addNote = () => {
 };
 
 module.exports.add = (a, b) => {
-  var sum = a + b;
-  return sum;
+  return a + b;
 };
