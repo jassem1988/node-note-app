@@ -1,3 +1,3 @@
 console.log("Strating notes.js");
 
-console.log(module);
+module.exports.age = 31;
