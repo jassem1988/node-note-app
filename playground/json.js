@@ -18,3 +18,16 @@ var originalNote = {
   title: 'Some title',
   body: 'Some body'
 };
+
+//originalNoteString
+var originalNoteString = JSON.stringify(originalNote);
+
+fs.writeFileSync("nodes.json", originalNoteString);
+
+var noteString = fs.readFileSync("nodes.json");
+
+//note
+var note = JSON.parse(noteString);
+
+console.log(typeof note);
+console.log(note.title);
