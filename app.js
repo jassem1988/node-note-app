@@ -15,9 +15,7 @@ if(command === "add") {
   var note = notes.addNote(argv.title, argv.body);
   if (note) {
     console.log("Note created");
-    console.log("---");
-    console.log(`Title: ${note.title}`);
-    console.log(`Body: ${note.body}`);
+    notes.logNote(note);
   } else {
     console.log("Note title taken");
   }
