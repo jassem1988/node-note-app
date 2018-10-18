@@ -2,6 +2,19 @@ console.log("Strating notes.js");
 
 const fs = require("fs");
 
+var fetchNotes = () => {
+  try {
+    var notesString = fs.readFileSync('notes-data.json');
+    notes = JSON.parse(notesString);
+  } catch(e) {
+
+  }
+};
+
+var saveNotes = () => {
+
+};
+
 var addNote = (title, body) => {
   var notes = [];
   var note = {
@@ -9,12 +22,7 @@ var addNote = (title, body) => {
     body
   };
 
-  try {
-    var notesString = fs.readFileSync('notes-data.json');
-    notes = JSON.parse(notesString);
-  } catch(e) {
 
-  }
 
   var duplicateNotes = notes.filter((note) => note.title === title);
 
