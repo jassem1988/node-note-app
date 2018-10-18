@@ -47,6 +47,12 @@ var removeNote = (title) => {
   return notes.length !== filteredNotes.length;
 };
 
+var logNote = (note) => {
+  console.log("---");
+  console.log(`Title: ${note.title}`);
+  console.log(`Body: ${note.body}`);
+};
+
 // ES5 addNote: addNote, ES6 addNote if they are have the same name
 module.exports = {
   addNote,
