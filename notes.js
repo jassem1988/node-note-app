@@ -1,5 +1,7 @@
 console.log("Strating notes.js");
 
+const fs = require("fs");
+
 var addNote = (title, body) => {
   var notes = [];
   var note = {
@@ -7,6 +9,7 @@ var addNote = (title, body) => {
     body
   };
   notes.push(note);
+  fs.writeFileSync("notes-data.json", JSON.stringify(notes));
 };
 
 var getAll = () => {
