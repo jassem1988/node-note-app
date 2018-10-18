@@ -39,7 +39,9 @@ var getNote = (title) => {
 };
 
 var removeNote = (title) => {
-  console.log("Remove note", title);
+  var notes = fetchNotes();
+  var filteredNotes = notes.filter((note) => note.title !== title);
+  saveNotes(filteredNotes);
 };
 
 // ES5 addNote: addNote, ES6 addNote if they are have the same name
