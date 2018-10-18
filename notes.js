@@ -2,6 +2,11 @@ console.log("Strating notes.js");
 
 var addNote = (title, body) => {
   var notes = [];
+  var note = {
+    title,
+    body
+  };
+  notes.push(note);
 };
 
 var getAll = () => {
