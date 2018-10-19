@@ -9,7 +9,21 @@ const argv = yargs
 .command('add', 'Add new note', {
   title: {
     describe: 'title of note',
-    demand: true
+    demand: true,
+    alias: 't'
+  },
+  body: {
+    describe: 'Body of note',
+    demand: true,
+    alias: 'b'
+  }
+})
+.command('list', 'List all notes')
+.command('read', 'Read a note', {
+  title: {
+    describe: 'title of note',
+    demand: true,
+    alias: 't'
   }
 })
 .help()
